@@ -46,5 +46,4 @@ function OpenShellWin()
     vim.api.nvim_command('horizontal resize 10')
     vim.o.number = false
     vim.api.nvim_command('wincmd p')
-
 end
