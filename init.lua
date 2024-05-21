@@ -35,6 +35,7 @@ vim.cmd [[colorscheme moonfly]]
 
 require('hardline').setup {}
 
+-- auto open terminal
 vim.cmd([[
     autocmd VimEnter * lua OpenShellWin()
 ]])
@@ -43,5 +44,7 @@ function OpenShellWin()
     vim.api.nvim_command('split')
     vim.api.nvim_command('terminal')
     vim.api.nvim_command('horizontal resize 10')
+    vim.o.number = false
     vim.api.nvim_command('wincmd p')
+
 end
