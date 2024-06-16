@@ -20,4 +20,4 @@ return require('packer').startup(function(use)
   use { 'tiagofumo/vim-nerdtree-syntax-highlight' }
 
   vim.cmd [[ syntax on ]]
-end)
+end )
