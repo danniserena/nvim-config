@@ -7,6 +7,7 @@ require("plugin.coc")
 require("plugin.nerdtree")
 require("plugin.devicons")
 require("plugin.moonfly")
+require("plugin.fzf")
 -- require("plugin.airline")
 
 return require('packer').startup(function(use)
@@ -18,6 +19,9 @@ return require('packer').startup(function(use)
   use { 'ryanoasis/vim-devicons' }
   use { 'preservim/nerdtree' }
   use { 'tiagofumo/vim-nerdtree-syntax-highlight' }
-
+  use {
+        'junegunn/fzf',
+        run = function() vim.fn['fzf#install']() end
+    }
   vim.cmd [[ syntax on ]]
 end )
